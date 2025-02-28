@@ -1,0 +1,222 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Level Up Hair Studios
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .slide-up {
+            animation: slideUp 1s ease-in-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .text-xl {
+                font-size: 1rem;
+            }
+            .bg-red-500 {
+                padding: 0.5rem 1rem;
+            }
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-gray-900 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <img src="WhatsApp Image 2025-02-28 at 11.01.17_12d7f912.jpg" alt="Logo" class="h-12 w-auto">
+    <h1 class="text-3xl font-bold">
+     Level Up Hair Studios
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:text-gray-400" href="#home">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-400" href="#services">
+        Services
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-400" href="#about">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-400" href="#contact">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <section class="relative h-screen flex items-center justify-center bg-cover bg-center" id="home">
+   <div id="slider" class="absolute inset-0 w-full h-full">
+       <img src="WhatsApp Image 2025-02-28 at 11.01.17_12d7f912.jpg" alt="Slider Image" class="absolute inset-0 w-full h-full object-cover z-0">
+   </div>
+   <div class="absolute inset-0 bg-black opacity-50"></div>
+   <div class="relative text-center text-white fade-in">
+       <h2 class="text-5xl font-bold mb-4">
+           Welcome to Level Up Hair Studios
+       </h2>
+       <p class="text-xl mb-8">
+           Your ultimate destination for stylish haircuts and grooming in Gweru, Zimbabwe.
+       </p>
+       <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300" href="#services">
+           Explore Our Services
+       </a>
+   </div>
+   <script>
+       const images = [
+           'images/IMG-20250228-WA0001.jpg',
+           'images/IMG-20250228-WA0002.jpg',
+           'images/IMG-20250228-WA0003.jpg',
+           'images/IMG-20250228-WA0004.jpg',
+           'images/IMG-20250228-WA0005.jpg',
+           'images/IMG-20250228-WA0007.jpg',
+           'images/IMG-20250228-WA0008.jpg',
+           'images/IMG-20250228-WA0009.jpg',
+           'images/IMG-20250228-WA0010.jpg',
+           'images/IMG-20250228-WA0011.jpg',
+           'images/IMG-20250228-WA0012.jpg',
+           'images/IMG-20250228-WA0013.jpg',
+           'images/IMG-20250228-WA0014.jpg',
+           'images/IMG-20250228-WA0015.jpg',
+           'images/IMG-20250228-WA0016.jpg',
+           'images/IMG-20250228-WA0017.jpg',
+           'images/IMG-20250228-WA0018.jpg',
+           'images/IMG-20250228-WA0019.jpg',
+           'images/IMG-20250228-WA0020.jpg',
+           'images/IMG-20250228-WA0021.jpg',
+           'images/IMG-20250228-WA0022.jpg',
+           'images/IMG-20250228-WA0023.jpg'
+       ];
+       let currentIndex = 0;
+
+       function changeImage() {
+           currentIndex = (currentIndex + 1) % images.length;
+           document.querySelector('#slider img').src = images[currentIndex];
+       }
+
+       setInterval(changeImage, 3000);
+   </script>
+  </section>
+  <section class="py-16 bg-white" id="services">
+   <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-8">
+     Our Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="p-6 bg-gray-100 rounded-lg shadow-lg slide-up">
+      <img alt="A stylish haircut being done by a barber" class="w-full h-48 object-cover rounded-t-lg" height="200" src="images/IMG-20250228-WA0002.jpg" width="300"/>
+      <h3 class="text-2xl font-bold mt-4">
+       Haircuts
+      </h3>
+      <p class="mt-2">
+       Get the latest and trendiest haircuts from our expert barbers.
+      </p>
+     </div>
+     <div class="p-6 bg-gray-100 rounded-lg shadow-lg slide-up">
+      <img alt="A man getting a beard trim" class="w-full h-48 object-cover rounded-t-lg" height="200" src="images/IMG-20250228-WA0003.jpg" width="300"/>
+      <h3 class="text-2xl font-bold mt-4">
+       Beard Trims
+      </h3>
+      <p class="mt-2">
+       Keep your beard looking sharp and well-groomed with our trimming services.
+      </p>
+     </div>
+     <div class="p-6 bg-gray-100 rounded-lg shadow-lg slide-up">
+      <img alt="A man getting a facial treatment" class="w-full h-48 object-cover rounded-t-lg" height="200" src="images/IMG-20250228-WA0004.jpg" width="300"/>
+      <h3 class="text-2xl font-bold mt-4">
+       Facial Treatments
+      </h3>
+      <p class="mt-2">
+       Rejuvenate your skin with our relaxing and refreshing facial treatments.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="py-16 bg-gray-900 text-white" id="about">
+   <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-8">
+     About Us
+    </h2>
+    <p class="text-xl mb-8">
+     Level Up Hair Studios is a premier barbershop located in Gweru, Zimbabwe. We are dedicated to providing top-notch grooming services to our clients. Our team of skilled barbers and stylists are passionate about helping you look and feel your best.
+    </p>
+    <img alt="Interior of Level Up Hair Studios showing modern barber chairs and equipment" class="mx-auto rounded-lg shadow-lg" height="400" src="images/IMG-20250228-WA0005.jpg" width="600"/>
+   </div>
+  </section>
+  <section class="py-16 bg-white" id="contact">
+   <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-8">
+     Contact Us
+    </h2>
+    <p class="text-xl mb-8">
+     We'd love to hear from you! Reach out to us for appointments or any inquiries.
+    </p>
+    <form class="max-w-lg mx-auto">
+     <div class="mb-4">
+      <input class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Name" type="text"/>
+     </div>
+     <div class="mb-4">
+      <input class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Number" type="phone"/>
+     </div>
+     <a href="https://wa.me/?text=Hello%20Level%20Up%20Hair%20Studios%2C%20I%20would%20like%20to%20book%20an%20appointment." class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+      Send Message
+     </a>
+    </form>
+   </div>
+  </section>
+  <footer class="bg-gray-900 text-white py-4">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2025 Level Up Hair Studios  Designed by </p><p class="text-blue"><a href="https://brocode.kedarcv.co.zw/" >BroCode Zimbabwe</a> </p><p>All rights reserved.
+    </p>
+    <div class="flex justify-center space-x-4 mt-4">
+     <a class="hover:text-gray-400" href="https://www.facebook.com/Shelaz-the-Barber-107844858041172/?ref=xav_pl_fb_external_link_ios">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="hover:text-gray-400" href="#">
+      <i class="fab fa-whatsapp">
+      </i>
+     </a>
+     <a class="hover:text-gray-400" href="https://www.instagram.com/levelup_hair_studio?igsh=MXhvODg5cWx1bG13Zg==">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

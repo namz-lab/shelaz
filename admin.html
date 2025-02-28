@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Up Hair Studios - Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+        
+        .admin-section {
+            background: var(--card-background);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .appointments-list {
+            margin-top: 20px;
+        }
+
+        .appointment-card {
+            background: var(--primary-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-upload {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .gallery-upload input,
+        .gallery-upload textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .gallery-upload button {
+            padding: 10px;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .gallery-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .gallery-item .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background: var(--card-background);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginSection" class="login-form">
+        <h2>Admin Login</h2>
+        <form id="loginForm" class="contact-form">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="adminPanel" class="admin-container" style="display: none;">
+        <h1>Admin Panel</h1>
+        
+        <div class="admin-section">
+            <h2>Appointments</h2>
+            <div id="appointmentsList" class="appointments-list">
+                <!-- Appointments will be loaded here -->
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h2>Gallery Management</h2>
+            <form id="galleryUploadForm" class="gallery-upload">
+                <input type="file" name="image" accept="image/*" required>
+                <textarea name="description" placeholder="Image description" rows="3"></textarea>
+                <button type="submit">Upload Image</button>
+            </form>
+            <div id="galleryItems" class="gallery-items">
+                <!-- Gallery items will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
